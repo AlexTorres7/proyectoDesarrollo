@@ -1,34 +1,52 @@
 <template>
     <section id="usuario">
+      <div class="head">
         <h1>Proyecto</h1>
 
         <h2>Dar de alta a Colaborador</h2>
-
+      </div>
+        
         <div class="alta">
-            <label for="name">Nombre Completo</label>
+          <div class="nombre">
+            <label for="name">Nombre(s)</label>
             <input type="text" name="agregar" id="name">
+            
+            <label for="apellido-pa">Apellido paterno</label>
+            <input type="text" name="agregar" id="apellido-pa">
 
+            <label for="apellido-ma">Apellido materno</label>
+            <input type="text" name="agregar" id="apellido-ma">
+          </div>
+
+          <div>
+            <label for="tel">Telefono</label>
+            <input type="text" name="agregar" id="tel">
+
+            <label for="email">Email</label>
+            <input type="text" name="agregar" id="email">
+          </div>
+
+          <div>
             <label for="cargo">Cargo</label>
             <input type="text" name="agregar" id="cargo">
+            
+            <label for="proyecto">Proyecto</label>
+            <input type="text" name="agregar" id="proyecto">
+          </div>
 
-            <label for="name">Email</label>
-            <input type="text" name="agregar" id="email">
-
-            <label for="cargo">Telefono</label>
-            <input type="text" name="agregar" id="cel">
-
-            <label for="name">Área</label>
-            <input type="text" name="agregar" id="area">
-
-            <label for="cargo">Fecha de registro</label>
+          <div>
+            <label for="fecha">Fecha de registro</label>
             <input type="text" name="agregar" id="fecha">
-
-            <label for="cargo">Hora de registro</label>
+            
+            <label for="hora">Hora de registro</label>
             <input type="text" name="agregar" id="hora">
-
+          </div>
         </div>
 
-        <button id="boton">Agregar</button>
+          <div class="button">
+            <button id="boton-cancelar">Cancelar</button>
+            <button id="boton-agregar">Agregar</button>
+          </div>
     </section>
 
 </template>
