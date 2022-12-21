@@ -1,23 +1,17 @@
 <template>
-
-  <img alt="FRD" src="./assets/dondé.png" id="img">
+  <button id="btn-logo"><img alt="FRD" src="./assets/dondé.png" id="img"></button>
   <UserName msg="Welcome to Your Vue.js App"/>
-
 </template>
 
 <script>
-  //import UserName from './components/UserName.vue'
-  import TestNumber from './components/TestNumber.vue'
-  //<UserName msg="Welcome to Your Vue.js App"/>
+import UserName from './components/UserName.vue'
 
-  export default {
-    name: 'App',
-    components: {
-      //HelloWorld
-      TestNumber
-      
-    }
+export default {
+  name: 'App',
+  components: {
+    UserName
   }
+}
 </script>
 
 <style>
@@ -42,9 +36,71 @@ background: linear-gradient(to right,  #35f931 0%,#9eff30 50%,#fff189 100%); /* 
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#35f931', endColorstr='#fff189',GradientType=1 ); /* IE6-9 */
 }
 
+button#btn-logo {
+    background: #35f931;
+    background: linear-gradient(to right, #35f931 0%,#9eff30 50%,#fff189 100%);
+}
 .alta {
   display: flex;
   flex-direction: column;
+}
+
+button#btn-registrar {
+    display: flex;
+    margin-left: auto;
+    height: 26px;
+}
+
+.search{
+  display: flex;
+  width: 100%;
+  height: 20px;
+}
+
+input#buscar {
+  width: 90%;
+  height: 20px;
+}
+
+button#btn-buscar {
+  width: 10%;
+  height: 26px;
+}
+
+div#navlist {
+    background-color: lawngreen;
+    display: flex;
+    width: 100%;
+}
+
+div#navlist a{
+    float:left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.nombre {
+  display: flex;
+  justify-content: center;
+}
+
+.datos {
+  display: flex;
+  justify-content: center;
+}
+
+.cargo {
+  display: flex;
+  justify-content: center;
+}
+
+.fecha {
+  display: flex;
+  justify-content: center;
 }
 
 </style>
