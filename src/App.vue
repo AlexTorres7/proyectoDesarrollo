@@ -5,16 +5,18 @@
 </template>
 
 <script>
-//import HelloWorld from './components/HelloWorld.vue'
-import TestNumber from './components/TestNumber.vue'
+  //import UserName from './components/UserName.vue'
+  import TestNumber from './components/TestNumber.vue'
+  //<UserName msg="Welcome to Your Vue.js App"/>
 
-export default {
-  name: 'App',
-  components: {
-    //HelloWorld
-    TestNumber
+  export default {
+    name: 'App',
+    components: {
+      //HelloWorld
+      TestNumber
+      
+    }
   }
-}
 </script>
 
 <style>
