@@ -1,17 +1,23 @@
 <template>
+
   <img alt="FRD" src="./assets/dondé.png" id="img">
   <UserName msg="Welcome to Your Vue.js App"/>
+
 </template>
 
 <script>
-import UserName from './components/UserName.vue'
+  //import UserName from './components/UserName.vue'
+  import TestNumber from './components/TestNumber.vue'
+  //<UserName msg="Welcome to Your Vue.js App"/>
 
-export default {
-  name: 'App',
-  components: {
-    UserName
+  export default {
+    name: 'App',
+    components: {
+      //HelloWorld
+      TestNumber
+      
+    }
   }
-}
 </script>
 
 <style>
