@@ -41,7 +41,4 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#35f931', end
   flex-direction: column;
 }
 
-.button{
-
-}
 </style>

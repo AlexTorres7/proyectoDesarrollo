@@ -6,7 +6,7 @@
         <h2>Dar de alta a Colaborador</h2>
       </div>
         
-        <div class="alta">
+        <div id="alta">
           <div class="nombre">
             <label for="name">Nombre(s)</label>
             <input type="text" name="agregar" id="name">
@@ -49,41 +49,41 @@
           </div>
     </section>
 
+    <section id="modulo-colaboradores">
+      <div class="head-modulo">
+        
+      </div>
+      
+      <div class="body-modulo">
+        <div class="search"                     
+             style="display: flex; flex-direction: column;">
+            <form action="#">
+                <input type="text"
+                    placeholder="Buscar"
+                    name="search">
+                <button>Buscar</button>
+            </form>
+        </div>
+
+        <div class="Base de datos">
+          <h1>Aquí va la base de datos</h1>
+        </div>
+
+        <div class="modulo-buttons">
+          <button>Modificar</button>
+          <button>Eliminar</button>
+        </div>
+
+      </div>
+    </section>
+    
 </template>
 
 <script>
-
 export default {
   name: 'UserName',
   props: {
     msg: String
   }
 }
-/* let boton = document.getElementById('boton')
-boton.addEventListener('click', cambioPantalla)
-
-function cambioPantalla(){
-  alert("Cambio de pantalla")
-} */
 </script>
-
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Zen+Dots&display=swap');
-.usuario{
-    font-family: 'Zen Dots', cursive;
-
-    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#5f32ff+0,9e2ff9+50,ff89fd+100 */
-background: rgb(95,50,255); /* Old browsers */
-background: -moz-linear-gradient(left,  rgba(95,50,255,1) 0%, rgba(158,47,249,1) 50%, rgba(255,137,253,1) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(left,  rgba(95,50,255,1) 0%,rgba(158,47,249,1) 50%,rgba(255,137,253,1) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to right,  rgba(95,50,255,1) 0%,rgba(158,47,249,1) 50%,rgba(255,137,253,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5f32ff', endColorstr='#ff89fd',GradientType=1 ); /* IE6-9 */
-}
-
-.usuario {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-</style>
