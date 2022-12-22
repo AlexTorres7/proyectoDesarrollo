@@ -9,7 +9,7 @@
 <!--Formulario para la captura de datos del prospecto-->
     <div class="card text-dark bg-light mb-3">
         <div   style="background-color:#109905" class="card-header" >
-        <center> <p  style=" font-size: small; color:#f9f9f9"> Nuevo Registro</p></center>
+        <center> <p  style=" font-size: x-large; color:#f9f9f9"> Nuevo Registro</p></center>
         </div>
       <div class="card-body" style="background-color:#F8F6F3">
     
@@ -77,8 +77,12 @@
     </div>
 </div>
 <br>
-<footer style="background: #0e392d; font-size: small; padding: 27px 0 20px;"> <br> <center><p style="color: #F8F6F3;"> © 2022 Fundación Dondé Todos los Derechos Reservados.</p></center>
-  <i class="fa-brands fa-facebook"></i>
+<footer style="background: #0e392d;  padding: 10px 0 5px;"> 
+  <br> 
+  <center>
+    <p style="color: #F8F6F3; font-size: small;"> © 2022 Fundación Dondé Todos los Derechos Reservados. <i class="fa-brands fa-facebook"></i></p>
+  </center>
+ 
 </footer>
 </template>
 
