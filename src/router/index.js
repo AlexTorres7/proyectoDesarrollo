@@ -4,13 +4,22 @@ import CrearColaborador from '../components/CrearColaborador'
 import ConsultarColaborador from '../components/ConsultarColaborador'
 import ActualizarColaborador from '../components/ActualizarColaborador'
 import EliminarColaborador from '../components/EliminarColaborador'
+import ProyectosG from '../components/ProyectosG'
+
+
 
 const routes = [
+  {
+    path: '/ProyectosG',
+    name: 'ProyectosG',
+    component: ProyectosG
+  },
   {
     path: '/',
     name: 'home',
     component: HomeView
   },
+ 
   {
     path: '/CrearColaborador',
     name: 'CrearColaborador',
