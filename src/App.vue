@@ -1,12 +1,12 @@
 <template>
   
-  <nav id="head">
+  <nav>
     <button><img alt="FRD" src="./assets/dondé-logo.png" id="img"></button>
-    
+
     <router-link to="/CrearColaborador">Crear Colaborador</router-link> 
-    <router-link to="/ConsultarColaborador">Consultar Colaborador</router-link> 
-    <router-link to="/ActualizarColaborador">Actualizar Colaborador</router-link> 
-    <router-link to="/EliminarColaborador">Eliminar Colaborador</router-link>
+    <router-link to="/ConsultarColaborador">ConsultarColaborador</router-link> 
+    <router-link to="/ActualizarColaborador">ActualizarColaborador</router-link> 
+    <router-link to="/EliminarColaborador">EliminarColaborador</router-link>
 
   </nav>
   <router-view/>
