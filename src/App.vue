@@ -1,5 +1,5 @@
 <template>
-  
+
   <nav>
 
     <router-link to="/CrearColaborador">Crear Colaborador</router-link> |
