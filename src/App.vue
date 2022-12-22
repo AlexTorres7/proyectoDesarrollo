@@ -1,8 +1,7 @@
 <template>
   
   <nav>
-    <button><img alt="FRD" src="./assets/dondé-logo.png" id="img"></button>
-
+    <router-link to="/"><img alt="FRD" src="./assets/dondé-logo.png" id="img" style="margin-right: 20px;"></router-link>
     <router-link to="/CrearColaborador">Crear Colaborador</router-link> 
     <router-link to="/ConsultarColaborador">ConsultarColaborador</router-link> 
     <router-link to="/ActualizarColaborador">ActualizarColaborador</router-link> 
