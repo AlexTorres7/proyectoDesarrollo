@@ -4,10 +4,11 @@ import CrearColaborador from '../components/CrearColaborador'
 import ConsultarColaborador from '../components/ConsultarColaborador'
 import ActualizarColaborador from '../components/ActualizarColaborador'
 import EliminarColaborador from '../components/EliminarColaborador'
-import CrearProyecto from '../components/CrearProyecto'
-import ConsultarProyecto from '../components/ConsultarProyecto'
-import CrearActividad from '../components/CrearActividad'
+import ProyectosG from '../components/ProyectosG'
 import ConsultarActividad from '../components/ConsultarActividad'
+import CrearActividad from '../components/CrearActividad'
+
+
 
 const routes = [
   {
@@ -37,24 +38,19 @@ const routes = [
     component: EliminarColaborador
   },
   {
-    path: '/CrearProyecto',
-    name: 'CrearProyecto',
-    component: CrearProyecto
-  },
-  {
-    path: '/ConsultarProyecto',
-    name: 'ConsultarProyecto',
-    component: ConsultarProyecto
-  },
-  {
-    path: '/CrearActividad',
-    name: 'CrearActividad',
-    component: CrearActividad
+    path: '/ProyectosG',
+    name: 'ProyectosG',
+    component: ProyectosG
   },
   {
     path: '/ConsultarActividad',
     name: 'ConsultarActividad',
     component: ConsultarActividad
+  },
+  {
+    path: '/CrearActividad',
+    name: 'CrearActividad',
+    component: CrearActividad
   },
   {
     path: '/about',

@@ -111,6 +111,7 @@ export default {
             .catch(console.log) */
     },
 
+
   },
 };
 </script>

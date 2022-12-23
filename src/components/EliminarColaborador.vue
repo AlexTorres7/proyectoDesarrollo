@@ -1,10 +1,10 @@
 <template>
-  <div>
-      Aquí se elimina el colaborador
-  </div>
+    <div>
+        Aquí se elimina colaborador
+    </div>
 </template>
 <script>
 export default {
-  
+    
 }
 </script>
