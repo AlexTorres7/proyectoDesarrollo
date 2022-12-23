@@ -4,6 +4,7 @@ import CrearColaborador from '../components/CrearColaborador'
 import ConsultarColaborador from '../components/ConsultarColaborador'
 import ActualizarColaborador from '../components/ActualizarColaborador'
 import EliminarColaborador from '../components/EliminarColaborador'
+import CrearActividad from '../components/CrearActividad'
 
 const routes = [
   {
@@ -30,6 +31,11 @@ const routes = [
     path: '/EliminarColaborador',
     name: 'EliminarColaborador',
     component: EliminarColaborador
+  },
+  {
+    path: '/CrearActividad',
+    name: 'CrearActividad',
+    component: CrearActividad
   },
   {
     path: '/about',

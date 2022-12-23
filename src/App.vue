@@ -7,6 +7,7 @@
     <router-link to="/ConsultarColaborador">ConsultarColaborador</router-link> 
     <router-link to="/ActualizarColaborador">ActualizarColaborador</router-link> 
     <router-link to="/EliminarColaborador">EliminarColaborador</router-link>
+    <router-link to="/CrearActividad">CrearActividad</router-link>
 
   </nav>
   <router-view/>

@@ -1,6 +1,6 @@
 <template>
     <div>
-        Aquí se actualiza colaborador
+        Aquí se actualiza 
     </div>
 </template>
 <script>
