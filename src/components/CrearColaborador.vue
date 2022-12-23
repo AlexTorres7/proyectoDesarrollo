@@ -1,0 +1,93 @@
+<template>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+   <div class="container" style="background-color: #f9f9f9;">
+    <div>
+      <BR></BR>
+     <center><p style="font-size: x-large;">Capturar Colaboradores</p></center> 
+    </div>
+
+<!--Formulario para la captura de datos del prospecto-->
+    <div class="card text-dark bg-light mb-3">
+        <div   style="background-color:#109905" class="card-header" >
+        <center> <p  style=" font-size: x-large; color:#f9f9f9"> Nuevo Registro</p></center>
+        </div>
+      <div class="card-body" style="background-color:#F8F6F3">
+    
+          <form class="row g-3" id="insert-form" method="POST">
+              <div class="col-md-4">
+               <center><label for="nombre" class="form-label">Nombre del colaborador:</label></center> 
+                <input type="text" name="nombre" class="form-control" tabindex="1" autofocus autocomplete="off" required>
+              </div>
+              <div class="col-md-4">
+                <center><label for="apellido_pat" class="form-label">Primer apellido:</label></center>
+                
+                <input type="text" name="apellido_pat" class="form-control" tabindex="1" autofocus autocomplete="off" required>
+              </div>
+              <div class="col-md-4">
+                <center><label for="apellido_pat" class="form-label">Segundo apellido:</label></center>
+                
+                <input type="text" name="apellido_mat" class="form-control" tabindex="1" autofocus autocomplete="off">
+              </div>
+              <div class="col-md-3">
+                <center><label for="inputAddress" class="form-label">Cargo:</label></center>
+                <input type="text" name="cargo" class="form-control" tabindex="1" autofocus  autocomplete="off" required>
+              </div>
+              <div class="col-md-3">
+                <center> <label for="inputAddress2" class="form-label">Email:</label></center>
+               
+                <input type="email" name="email" class="form-control"  tabindex="1" autofocus autocomplete="off" required>
+              </div>
+              <div class="col-md-3">
+                <center><label for="inputCity"  class="form-label">Télefono:</label></center>
+                
+                <input type="text" name="telefono" class="form-control" tabindex="1" autofocus>
+              </div>
+              <div class="col-md-3">
+                <center><label for="inputCity" class="form-label">Área:</label></center>
+                
+                <input type="text" name="area" class="form-control" tabindex="1" autofocus autocomplete="off" required>
+              </div>
+              <div class="col-md-3">
+                <center><label for="inputCity" class="form-label">Fecha:</label></center>
+                
+                <input type="text" name="fecha" class="form-control" tabindex="1" autofocus autocomplete="off">
+              </div>
+              <div class="col-md-3">
+                <center><label for="inputCity" class="form-label">Hora:</label></center>
+                
+                <input type="text" name="hora" class="form-control" tabindex="1" autofocus  autocomplete="off" required>
+              </div>
+              <BR></BR>
+             <!-- <center class="col-9">
+                <input type="submit" class="btn btn-success btn-lg" style="background-color: #109905;" name="save" id="save" value="Guardar"/>
+
+                <a class="btn btn-success btn-lg salir" style="background-color: #CB0C0C; color: black; text-align: right"  >Salir <i class="bi bi-box-arrow-right me-2"></i></a>
+              </center>
+            <center ><button style="position: absolute; left: 600px; bottom:4%;" type="submit" class="btn btn-success">Success</button> <button  style="position: absolute; right: 600px; bottom:4%;" type="submit" class="btn btn-danger">Danger</button></center> 
+            -->
+              
+              <div  >
+                <br>
+      
+              <center><button style="position: right: 400px; bottom:1%;" type="submit" class="btn btn-danger">Salir</button> <button style="position:left: 1000px; bottom:1%;" type="submit" class="btn btn-success">Guardar</button></center> 
+              </div>
+              
+        </form>
+      </div>   
+    </div>
+</div>
+<br>
+<footer style="background: #0e392d;  padding: 10px 0 5px;"> 
+  <br> 
+  <center>
+    <p style="color: #F8F6F3; font-size: small;"> © 2022 Fundación Dondé Todos los Derechos Reservados. <i class="fa-brands fa-facebook"></i></p>
+  </center>
+ 
+</footer>
+</template>
+
+<script>
+export default {
+    
+}
+</script>

@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
   <div class="hello">
     <h1>{{ msg }}</h1>
     <p>
@@ -30,6 +31,22 @@
   </div>
 </template>
 
+=======
+  <section id="inicio">
+      <div class="head">
+        <h1>Proyecto</h1>
+
+        <h2>CRUD Colaboradores FRD</h2>
+      </div>
+    </section>
+    <br>
+<footer style="background: #0e392d; font-size: small; padding: 22px 0 21px;"> <br> <center><p style="color: #F8F6F3;"> © 2022 Fundación Dondé Todos los Derechos Reservados.</p></center>
+  <i class="fa-brands fa-facebook"></i>
+</footer>
+</template>
+
+
+>>>>>>> 47c06c2b268ff73676680242d64518ea34616785
 <script>
 export default {
   name: 'HelloWorld',
@@ -39,6 +56,7 @@ export default {
 }
 </script>
 
+<<<<<<< HEAD
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h3 {
@@ -56,3 +74,5 @@ a {
   color: #42b983;
 }
 </style>
+=======
+>>>>>>> 47c06c2b268ff73676680242d64518ea34616785
