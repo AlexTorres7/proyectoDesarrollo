@@ -1,53 +1,21 @@
-<<<<<<< HEAD
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
-</template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
-</script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-=======
-
-<template>
-  
   <nav>
     <button id="btn-home"><img alt="FRD" src="./assets/dondé-logo.png" id="img"></button>
     <router-link to="/CrearColaborador">Crear Colaborador</router-link> 
-    <router-link to="/ConsultarColaborador">Consultar Colaborador</router-link> 
-    <router-link to="/ActualizarColaborador">Actualizar Colaborador</router-link> 
-    <router-link to="/EliminarColaborador">Eliminar Colaborador</router-link>
-    <router-link to="/ProyectosG">Proyectos</router-link>
-    <router-link to="/ConsultarActividad">Consultar Actividades</router-link>
+    <router-link to="/ConsultarColaborador">Consultar Colaboradores</router-link> 
+    <!--<router-link to="/ActualizarColaborador">Actualizar Colaborador</router-link> 
+    <router-link to="/EliminarColaborador">Eliminar Colaborador</router-link>-->
     <router-link to="/CrearActividad">Crear Actividad</router-link>
+    <router-link to="/ConsultarActividad">Consultar Actividades</router-link>
+    <router-link to="/CrearProyecto">Crear Proyecto</router-link>
+    <router-link to="/ConsultarProyecto">Consultar Proyectos</router-link>
 
   </nav>
   <router-view/>
 </template>
 
-
 <style>
-
-
-
-
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,300;0,500;1,300;1,500&display=swap');
 nav{
   /*font-family: 'Poppins', sans-serif;*/
@@ -86,5 +54,4 @@ nav a:hover{
   text-align: center;
 }
 
->>>>>>> 47c06c2b268ff73676680242d64518ea34616785
 </style>

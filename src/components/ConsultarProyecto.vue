@@ -3,37 +3,36 @@
     <div class="container">
         <div class="card">
             <div class="card-header">
-                Actividades
+                Proyectos
             </div>
             <div class="card-body">
                 <table class="table">
                     <thead>
                         <tr>
                         <th>Id</th>
-                        <th>Actividad</th>
-                        <th>Fecha Inicio</th>
-                        <th>Fecha Fin</th>
                         <th>Proyecto</th>
-                        <th>Colaborador</th>
-                        <th>Acciones</th>
+                        <th>Tipo de proyecto</th>
+                        <th>Descripción</th>
+                        <th>Fecha Inicio</th>
+                        <th>Fecha Final</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr v-for="actividad in actividades" :key="actividad.id_actividad">
-                            <td>{{ actividad.id_actividad }}</td>
-                            <td>{{ actividad.nom_actividades }}</td>
-                            <td>{{ actividad.horaini }}</td>
-                            <td>{{ actividad.horafin }}</td>
-                            <td>{{ actividad.nombre_proyecto }}</td>
-                            <td>{{ actividad.nom_colaborador }}</td>
+                        <tr v-for="proyecto in proyecto" :key="proyecto.id_proyecto">
+                            <td>{{ proyecto.id_proyecto }}</td>
+                            <td>{{ proyecto.nombre_proyecto }}</td>
+                            <td>{{ proyecto.tipo_proyecto }}</td>
+                            <td>{{ proyecto.descripcion_proyecto }}</td>
+                            <td>{{ proyecto.fechaini }}</td>
+                            <td>{{ proyecto.fechafin }}</td>
                         <td>
                             <div class="btn-group" role="group" aria-label="">
                             
-                            <router-link :to="{name:'ActualizarColaborador', params:{id:actividad.id_actividad}}" class="btn btn-info">Editar</router-link>
+                            <router-link :to="{name:'ActualizarColaborador', params:{id:proyecto.id_proyecto}}" class="btn btn-info">Editar</router-link>
 
                             <button
                                 type="button"
-                                v-on:click="borrarColaborador(actividad.id_actividad)"
+                                v-on:click="borrarColaborador(proyecto.id_proyecto)"
                                 class="btn btn-danger"
                             >
                                 Eliminar
@@ -52,30 +51,30 @@
 export default {
   data() {
     return {
-      actividades: [],
+      proyecto: [],
     };
   },
   //Llamamos al metodo consultarColaborador
   created: function () {
-    this.consultarActividad();
+    this.consultarProyecto();
   },
   //creamos el metodo consultarColaborador para consumir la API
   methods: {
-    consultarActividad() {
+    consultarProyecto() {
       //Se ingresa la URL de la API
       const options = {
         method: 'GET',
         headers: {'Content-Type': 'application/json'},
       }
-      fetch("http://ec2-52-55-99-170.compute-1.amazonaws.com:8080/api/actividades",options)
+      fetch("http://ec2-52-55-99-170.compute-1.amazonaws.com:8080/api/proyectos",options)
         //Los datos son guardados en formato JSON
         .then((respuesta) => respuesta.json())
         .then((datosRespuesta) => {
           console.log(datosRespuesta);
-          this.actividades = [];
+          this.proyecto = [];
           console.log(datosRespuesta);
           //if (typeof datosRespuesta[0].success === "undefined") {
-            this.actividades = datosRespuesta;
+            this.proyecto = datosRespuesta;
           //}
         })
         .catch(console.log);
