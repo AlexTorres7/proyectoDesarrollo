@@ -1,20 +1,21 @@
 <template>
 
   <nav>
-    <button><img alt="FRD" src="./assets/dondé-logo.png" id="img"></button>
-
+    <button id="btn-home"><img alt="FRD" src="./assets/dondé-logo.png" id="img"></button>
     <router-link to="/CrearColaborador">Crear Colaborador</router-link> 
-    <router-link to="/ConsultarColaborador">ConsultarColaborador</router-link> 
-    <router-link to="/ActualizarColaborador">ActualizarColaborador</router-link> 
-    <router-link to="/EliminarColaborador">EliminarColaborador</router-link>
-    <router-link to="/CrearActividad">CrearActividad</router-link>
+    <router-link to="/ConsultarColaborador">Consultar Colaboradores</router-link> 
+    <!--<router-link to="/ActualizarColaborador">Actualizar Colaborador</router-link> 
+    <router-link to="/EliminarColaborador">Eliminar Colaborador</router-link>-->
+    <router-link to="/CrearActividad">Crear Actividad</router-link>
+    <router-link to="/ConsultarActividad">Consultar Actividades</router-link>
+    <router-link to="/CrearProyecto">Crear Proyecto</router-link>
+    <router-link to="/ConsultarProyecto">Consultar Proyectos</router-link>
 
   </nav>
   <router-view/>
 </template>
 
 <style>
-
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,300;0,500;1,300;1,500&display=swap');
 nav{
   /*font-family: 'Poppins', sans-serif;*/
@@ -39,7 +40,8 @@ height: 50px;
 }
 
 nav a{
-    display: flex;
+    
+  display: flex;
     color: white;
     padding: 12px;
     text-decoration: none;

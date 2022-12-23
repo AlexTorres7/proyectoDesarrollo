@@ -4,7 +4,10 @@ import CrearColaborador from '../components/CrearColaborador'
 import ConsultarColaborador from '../components/ConsultarColaborador'
 import ActualizarColaborador from '../components/ActualizarColaborador'
 import EliminarColaborador from '../components/EliminarColaborador'
+import CrearProyecto from '../components/CrearProyecto'
+import ConsultarProyecto from '../components/ConsultarProyecto'
 import CrearActividad from '../components/CrearActividad'
+import ConsultarActividad from '../components/ConsultarActividad'
 
 const routes = [
   {
@@ -12,6 +15,7 @@ const routes = [
     name: 'home',
     component: HomeView
   },
+ 
   {
     path: '/CrearColaborador',
     name: 'CrearColaborador',
@@ -23,7 +27,7 @@ const routes = [
     component: ConsultarColaborador
   },
   {
-    path: '/ActualizarColaborador',
+    path: '/ActualizarColaborador/:id',
     name: 'ActualizarColaborador',
     component: ActualizarColaborador
   },
@@ -33,9 +37,24 @@ const routes = [
     component: EliminarColaborador
   },
   {
+    path: '/CrearProyecto',
+    name: 'CrearProyecto',
+    component: CrearProyecto
+  },
+  {
+    path: '/ConsultarProyecto',
+    name: 'ConsultarProyecto',
+    component: ConsultarProyecto
+  },
+  {
     path: '/CrearActividad',
     name: 'CrearActividad',
     component: CrearActividad
+  },
+  {
+    path: '/ConsultarActividad',
+    name: 'ConsultarActividad',
+    component: ConsultarActividad
   },
   {
     path: '/about',

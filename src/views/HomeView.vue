@@ -1,7 +1,7 @@
 <template>
   <div class="home">
-    <img alt="Dondé" src="../assets/dondé.png">
-    <HelloWorld msg="Bienvenido al Sistema"/>
+    <img style="width: 970px;" alt="Dondé" src="../assets/dondé.png">
+    <HelloWorld msg="Bienvenido"/>
   </div>
 </template>
 
