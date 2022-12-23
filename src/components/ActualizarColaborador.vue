@@ -1,5 +1,6 @@
 <template>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet">
    <div class="container" style="background-color: #f9f9f9;">
     <div>
       <BR></BR>
@@ -15,47 +16,40 @@
     
           <form class="row g-3" id="insert-form" method="POST">
               <div class="col-md-4">
+<!---------------------------------------------nombre de colaborador-------------------------------------------------------------------->
                <center><label for="nombre" class="form-label">Nombre del colaborador:</label></center> 
-                <input type="text" name="nombre" class="form-control" tabindex="1" autofocus autocomplete="off" required>
+                <input type="text" name="nombre" class="form-control" tabindex="1" autofocus autocomplete="off" placeholder="jorge" required>
               </div>
+<!---------------------------------------------primer apellido-------------------------------------------------------------------->
               <div class="col-md-4">
-                <center><label for="apellido_pat" class="form-label">Primer apellido:</label></center>
-                
-                <input type="text" name="apellido_pat" class="form-control" tabindex="1" autofocus autocomplete="off" required>
+                <center><label for="apellido_pat" class="form-label">Apellidos:</label></center>
+                <input type="text" name="apellido_pat" class="form-control" tabindex="1" autofocus autocomplete="off" placeholder="pech basto" required>
               </div>
+             
               <div class="col-md-4">
-                <center><label for="apellido_pat" class="form-label">Segundo apellido:</label></center>
-                
-                <input type="text" name="apellido_mat" class="form-control" tabindex="1" autofocus autocomplete="off">
-              </div>
-              <div class="col-md-3">
                 <center><label for="inputAddress" class="form-label">Cargo:</label></center>
-                <input type="text" name="cargo" class="form-control" tabindex="1" autofocus  autocomplete="off" required>
+                <input type="text" name="cargo" class="form-control" tabindex="1" autofocus  autocomplete="off" placeholder="encargado DTI" required>
               </div>
-              <div class="col-md-3">
+              <div class="col-md-4">
                 <center> <label for="inputAddress2" class="form-label">Email:</label></center>
                
-                <input type="email" name="email" class="form-control"  tabindex="1" autofocus autocomplete="off" required>
+                <input type="email" name="email" class="form-control"  tabindex="1" autofocus autocomplete="off" placeholder="jio_anastaci@frd.org.mx" required>
               </div>
-              <div class="col-md-3">
+              <div class="col-md-4">
                 <center><label for="inputCity"  class="form-label">Télefono:</label></center>
                 
-                <input type="text" name="telefono" class="form-control" tabindex="1" autofocus>
+                <input type="text" name="telefono" class="form-control" tabindex="1" placeholder="9911206912" autofocus>
+              </div>
+
+              <div class="col-md-3">
+                <center><label for="inputCity" class="form-label">Fecha Inicio:</label></center>
+                
+                <input type="datetime-local" name=""  data-provide="datepicker" class="form-control" tabindex="1" autofocus autocomplete="off" placeholder="">
               </div>
               <div class="col-md-3">
-                <center><label for="inputCity" class="form-label">Área:</label></center>
+                <center><label for="inputCity" class="form-label">Fecha Final:</label></center>
                 
-                <input type="text" name="area" class="form-control" tabindex="1" autofocus autocomplete="off" required>
-              </div>
-              <div class="col-md-3">
-                <center><label for="inputCity" class="form-label">Fecha:</label></center>
-                
-                <input type="text" name="fecha" class="form-control" tabindex="1" autofocus autocomplete="off">
-              </div>
-              <div class="col-md-3">
-                <center><label for="inputCity" class="form-label">Hora:</label></center>
-                
-                <input type="text" name="hora" class="form-control" tabindex="1" autofocus  autocomplete="off" required>
+                <input type="datetime-local" name="" class="form-control" tabindex="1" autofocus  autocomplete="off" required placeholder="">
               </div>
               <BR></BR>
              <!-- <center class="col-9">

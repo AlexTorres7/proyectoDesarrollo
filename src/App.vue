@@ -56,6 +56,11 @@ nav a:hover{
   color: white;
   font-weight: bolder;
   text-align: center;
+  background:  #0e392d;
+  border-radius: 10px;
+
+  
+
 }
 
 </style>

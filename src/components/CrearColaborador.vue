@@ -13,49 +13,48 @@
         </div>
       <div class="card-body" style="background-color:#F8F6F3">
     
-          <form class="row g-3" id="insert-form" method="POST">
+          <form class="row g-3" v-on:submit.prevent="agregarColaborador">
               <div class="col-md-4">
+<!---------------------------------------------nombre de colaborador-------------------------------------------------------------------->
                <center><label for="nombre" class="form-label">Nombre del colaborador:</label></center> 
-                <input type="text" name="nombre" class="form-control" tabindex="1" autofocus autocomplete="off" required>
+                <input type="text" name="nom_colaborador"  v-model="colaborador.nom_colaborador" id="nom_colaborador" class="form-control" tabindex="1" autofocus autocomplete="off" placeholder="Mauricio Gabriel"  required>
               </div>
+<!---------------------------------------------primer apellido-------------------------------------------------------------------->
               <div class="col-md-4">
-                <center><label for="apellido_pat" class="form-label">Primer apellido:</label></center>
-                
-                <input type="text" name="apellido_pat" class="form-control" tabindex="1" autofocus autocomplete="off" required>
+                <center><label for="apellido_pat" class="form-label">Apellidos:</label></center>
+                <input type="text" name="apellido" v-model="colaborador.apellido" id="apellido" class="form-control" tabindex="1" autofocus autocomplete="off" placeholder="Poot Canul" required>
               </div>
-              <div class="col-md-4">
-                <center><label for="apellido_pat" class="form-label">Segundo apellido:</label></center>
-                
-                <input type="text" name="apellido_mat" class="form-control" tabindex="1" autofocus autocomplete="off">
-              </div>
+           
+           
+<!---------------------------------------------cargo-------------------------------------------------------------------->               
               <div class="col-md-3">
                 <center><label for="inputAddress" class="form-label">Cargo:</label></center>
-                <input type="text" name="cargo" class="form-control" tabindex="1" autofocus  autocomplete="off" required>
+                <input type="text" name="cargo" v-model="colaborador.cargo_colaborador" id="cargo" class="form-control" tabindex="1" autofocus  autocomplete="off" placeholder="chalam" required>
               </div>
-              <div class="col-md-3">
+ <!---------------------------------------------Email-------------------------------------------------------------------->  
+              <div class="col-md-4">
                 <center> <label for="inputAddress2" class="form-label">Email:</label></center>
                
-                <input type="email" name="email" class="form-control"  tabindex="1" autofocus autocomplete="off" required>
+                <input type="email" name="email" v-model="colaborador.mail" id="mail" class="form-control"  tabindex="1" autofocus autocomplete="off" placeholder="anastacio@frd.org.mx" required>
               </div>
-              <div class="col-md-3">
+<!---------------------------------------------Telefono-------------------------------------------------------------------->              
+              <div class="col-md-4">
                 <center><label for="inputCity"  class="form-label">Télefono:</label></center>
                 
-                <input type="text" name="telefono" class="form-control" tabindex="1" autofocus>
+                <input type="text" name="telefono" v-model="colaborador.telefono" id="telefono" class="form-control" tabindex="1" autofocus placeholder="991123432">
               </div>
-              <div class="col-md-3">
-                <center><label for="inputCity" class="form-label">Área:</label></center>
+
+ <!---------------------------------------------fecha--------------------------------------------------------------------> 
+              <div class="col-md-4">
+                <center><label for="inputCity" class="form-label">Fecha Inicio:</label></center>
                 
-                <input type="text" name="area" class="form-control" tabindex="1" autofocus autocomplete="off" required>
+                <input type="datetime-local" name="fechafin" v-model="colaborador.fechaini" id="fechaini" class="form-control" tabindex="1" autofocus autocomplete="off" placeholder="12-12-2022">
               </div>
-              <div class="col-md-3">
-                <center><label for="inputCity" class="form-label">Fecha:</label></center>
+ <!---------------------------------------------hora--------------------------------------------------------------------> 
+              <div class="col-md-4">
+                <center><label for="inputCity" class="form-label">Fecha Final:</label></center>
                 
-                <input type="text" name="fecha" class="form-control" tabindex="1" autofocus autocomplete="off">
-              </div>
-              <div class="col-md-3">
-                <center><label for="inputCity" class="form-label">Hora:</label></center>
-                
-                <input type="text" name="hora" class="form-control" tabindex="1" autofocus  autocomplete="off" required>
+                <input type="datetime-local" name="fechafin" v-model="colaborador.fechafin" id="fechafin" class="form-control" tabindex="1" autofocus  autocomplete="off" placeholder="12-12-2023" required>
               </div>
               <BR></BR>
              <!-- <center class="col-9">
@@ -88,6 +87,103 @@
 
 <script>
 export default {
-    
-}
+  
+  data() {
+
+    return {
+
+      colaborador: {},
+
+    };
+
+  },
+
+  methods: {
+
+    agregarColaborador() {
+
+      /* console.log(this.colaborador); */
+
+      const datosEnviar = {
+
+        nom_colaborador: this.colaborador.nom_colaborador,
+
+        apellido: this.colaborador.apellido,
+
+        cargo_colaborador: this.colaborador.cargo_colaborador,
+
+        mail: this.colaborador.mail,
+
+        telefono: this.colaborador.telefono,
+
+        fechaini: this.colaborador.fechaini,
+
+        fechafin: this.colaborador.fechafin
+
+      };
+
+
+
+      const options = {
+
+        method: 'POST',
+
+        headers: {'Content-Type': 'application/json'},
+
+        body: JSON.stringify(datosEnviar)
+
+      }
+
+
+
+      console.log(datosEnviar);
+
+
+
+      fetch('http://10.60.63.122:3001/api/colaboradores', options)
+
+      .then(response => response.json())
+
+      .then(response => {
+
+        console.log(response);
+
+        window.location.href='ConsultarColaborador'
+
+      })
+
+      .catch(err => console.error(err));
+
+
+
+        /* fetch('http://10.60.63.122:3001/api/colaboradores',{
+
+          method:"POST",
+
+          body:JSON.stringify(datosEnviar)
+
+        })
+
+
+
+        .then(respuesta=>respuesta.json())
+
+        .then((datosRespuesta=>{
+
+            console.log(datosRespuesta);
+
+            window.location.href='ConsultarColaborador'
+
+        })
+
+        .catch(err => console.error(err))
+
+        ) */
+
+    },
+
+  },
+
+};
+
 </script>
