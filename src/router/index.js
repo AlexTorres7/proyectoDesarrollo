@@ -22,7 +22,7 @@ const routes = [
     component: ConsultarColaborador
   },
   {
-    path: '/ActualizarColaborador',
+    path: '/ActualizarColaborador/:id',
     name: 'ActualizarColaborador',
     component: ActualizarColaborador
   },
