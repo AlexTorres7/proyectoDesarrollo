@@ -44,13 +44,13 @@
                 <input type="text" name="telefono" v-model="colaborador.telefono" id="telefono" class="form-control" tabindex="1" autofocus placeholder="991123432">
               </div>
 
- <!---------------------------------------------fecha--------------------------------------------------------------------> 
+ <!---------------------------------------------fecha inicio--------------------------------------------------------------------> 
               <div class="col-md-4">
                 <center><label for="inputCity" class="form-label">Fecha Inicio:</label></center>
                 
                 <input type="datetime-local" name="fechafin" v-model="colaborador.fechaini" id="fechaini" class="form-control" tabindex="1" autofocus autocomplete="off" placeholder="12-12-2022">
               </div>
- <!---------------------------------------------hora--------------------------------------------------------------------> 
+ <!---------------------------------------------  Fecha final--------------------------------------------------------------------> 
               <div class="col-md-4">
                 <center><label for="inputCity" class="form-label">Fecha Final:</label></center>
                 
@@ -67,7 +67,7 @@
               
               <div  >
                 <br>
-      
+  <!-----------------------------------------------------------------botones para salir y guardar-->
               <center><button style="position: right: 400px; bottom:1%;" type="submit" class="btn btn-danger">Salir</button> <button style="position:left: 1000px; bottom:1%;" type="submit" class="btn btn-success">Guardar</button></center> 
               </div>
               
