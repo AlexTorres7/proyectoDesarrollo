@@ -32,7 +32,7 @@
 
                             <button
                                 type="button"
-                                v-on:click="borrarColaborador(proyecto.id_proyecto)"
+                                v-on:click="borrarProyecto(proyecto.id_proyecto)"
                                 class="btn btn-danger"
                             >
                                 Eliminar
@@ -79,14 +79,22 @@ export default {
         })
         .catch(console.log);
     },
-    /*
-    //creamos el metodo borrarColaborador para eliminar registros desde la API
-    borrarColaborador(id) {
+    borrarProyecto(id) {
       console.log(id);
       const options = {
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
-      };*/
+      };
+
+      fetch('http://ec2-52-55-99-170.compute-1.amazonaws.com:8080/api/proyectos/'+id, options)
+        .then((response) => response.json())
+        .then((response) => {
+          console.log(response);
+          window.location.href = "ConsultarProyecto";
+        })
+
+        .catch((err) => console.error(err));
+    },
   },
 };
 </script>

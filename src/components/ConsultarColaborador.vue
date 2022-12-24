@@ -92,23 +92,14 @@ export default {
         headers: { "Content-Type": "application/json" },
       };
 
-      fetch(`http://ec2-52-55-99-170.compute-1.amazonaws.com:3000/api/colaboradores/${id}`, options)
+      fetch('http://ec2-52-55-99-170.compute-1.amazonaws.com:8080/api/colaboradores/'+id, options)
         .then((response) => response.json())
         .then((response) => {
           console.log(response);
           window.location.href = "ConsultarColaborador";
         })
+
         .catch((err) => console.error(err));
-
-      /* fetch('http://10.60.63.122:3001/api/colaboradores/?borrar='+id)
-            //Los datos son gusrdados en formato JSON
-            .then(respuesta=>respuesta.json())
-            .then((datosRespuesta)=>{
-                console.log(datosRespuesta)
-               window.location.href="ConsultarColaborador"
-
-            })
-            .catch(console.log) */
     },
 
   },
